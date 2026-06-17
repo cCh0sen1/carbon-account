@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/carbon_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: 000917
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+      database: 0
+
+# 接口文档开关
+knife4j:
+  enable: true
+  openapi:
+    title: 低碳积分平台接口文档
+    description: 后端API文档
+    email: 1983546472@qq.com
+    concat: 开发者
+    version: 1.0.0

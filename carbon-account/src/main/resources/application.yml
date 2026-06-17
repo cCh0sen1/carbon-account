@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: carbon-platform
+
+# ???????
+spring.jackson.date-format: yyyy-MM-dd HH:mm:ss
+spring.jackson.time-zone: Asia/Shanghai
+
+# ????
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# JWT??
+jwt:
+  secret: CarbonPlatformSecretKey1234567890ABCDEFGHIJKLMN
+  expire-time: 86400000  # 24??
+
+# ??
+logging:
+  level:
+    root: info
+    com.example.carbon.mapper: debug
